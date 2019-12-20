@@ -6,8 +6,6 @@ header-img: "img/green.jpg"
 ---
 
 
-pentest web security
-
 
 
 
