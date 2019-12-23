@@ -1,10 +1,10 @@
-﻿---
+---
 layout: post
 title: linux操作：清理入侵日志和维持权限
 date: 2019-12-20
 categories: blog
 tags: [linux，清理入侵日志和维持权限]
-description: linux，清理入侵日志和维持权限
+description: linux，清理入侵日志和suid提权
 ---
 
 #### 一、环境
